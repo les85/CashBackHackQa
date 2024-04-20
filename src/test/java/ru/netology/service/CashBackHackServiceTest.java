@@ -1,27 +1,27 @@
 package ru.netology.service;
 
-import static org.junit.Assert.assertEquals;
+import static org.testng.Assert.assertEquals;
 
 public class CashBackHackServiceTest {
 
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void testRemain() {
         CashBackHackService service = new CashBackHackService();
         int amount = 1000;
         int actual = service.remain(amount);
         int expected = 0;
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void testRemainWhithCashBack() {
         CashBackHackService service = new CashBackHackService();
         int amount = 900;
         int actual = service.remain(amount);
         int expected = 100;
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void testRemainZero() {
         CashBackHackService service = new CashBackHackService();
 
@@ -29,9 +29,9 @@ public class CashBackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1000;
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void testRemainMultipleBoundary() {
         CashBackHackService service = new CashBackHackService();
 
@@ -39,10 +39,10 @@ public class CashBackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 1000;
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 
-    @org.junit.Test
+    @org.testng.annotations.Test
     public void testRemainHalfBoundary() {
         CashBackHackService service = new CashBackHackService();
 
@@ -50,6 +50,6 @@ public class CashBackHackServiceTest {
         int expected = 500;
         int actual = service.remain(amount);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
     }
 }
